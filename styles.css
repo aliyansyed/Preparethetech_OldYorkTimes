@@ -8,6 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     padding-bottom: 60px; /* For å gjøre plass til den faste footeren */
+    background: lightgray;
 }
 
 header {
@@ -42,25 +43,30 @@ main {
 .news-headline {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: 10px;
+    gap: 4px;
     align-items: center;
 }
-
+.news-headline p{
+    background-color: white;
+    padding: 5px;
+    color: purple;
+}
 .news-headline .latest {
     background-color: red;
     color: white;
-    padding: 5px;
+    padding: 14px;
 }
 
 .news-item {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
+    color:purple
 }
 
 .image-placeholder {
     height: 200px;
-    background-color: #e0e0e0;
+    background-color: white;
     text-align: center;
     line-height: 200px;
     color: purple;
