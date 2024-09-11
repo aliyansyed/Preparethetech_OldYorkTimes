@@ -10,6 +10,7 @@ body {
     padding-bottom: 60px; /* For å gjøre plass til den faste footeren */
 }
 
+/* Header Styles */
 header {
     display: grid;
     grid-template-columns: 1fr auto auto;
@@ -29,6 +30,7 @@ header .icons {
     font-size: 1.5rem;
 }
 
+/* Main Content Styles */
 main {
     padding: 10px;
 }
@@ -67,11 +69,19 @@ main {
     border: 1px solid purple;
 }
 
+/* Responsiv bildehåndtering */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* For å fjerne eventuelle mellomrom under bildet */
+}
+
 .news-content {
     font-size: 0.9rem;
     padding-bottom: 40px;
 }
 
+/* Footer Styles */
 footer {
     background-color: #00b7b7;
     color: white;
@@ -85,6 +95,37 @@ footer {
 
 footer p {
     margin: 3px 0;
+}
+
+/* Effekt for bilder */
+.beginning, .beginning2 {
+    position: relative;
+    display: inline-block; /* Sørger for at containeren tilpasses bildet */
+    width: 100%; /* Bildene blir responsivt tilpasset beholderens bredde */
+}
+
+.beginning::after, .beginning2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Sikrer at gradienten ikke forstyrrer eventuelle museklikk */
+}
+
+.beginning::after {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.beginning2::after {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.beginning img, .beginning2 img {
+    display: block;
+    width: 100%; /* Gjør bildene responsive ved å fylle beholderens bredde */
+    height: auto; /* Opprettholder bildenes proporsjoner */
 }
 
 /* Media queries for større skjermer (tablets og desktops) */
