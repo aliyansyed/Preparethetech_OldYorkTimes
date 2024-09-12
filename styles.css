@@ -104,8 +104,7 @@ footer p {
 /* Effekt for bilder */
 .beginning, .beginning2 {
     position: relative;
-    display: inline-block; /* Sørger for at containeren tilpasses bildet */
-    width: 100%; /* Bildene blir responsivt tilpasset beholderens bredde */
+    display: inline-block;
 }
 
 .beginning::after, .beginning2::after {
@@ -115,7 +114,7 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Sikrer at gradienten ikke forstyrrer eventuelle museklikk */
+    pointer-events: none; 
 }
 
 .beginning::after {
@@ -128,8 +127,8 @@ footer p {
 
 .beginning img, .beginning2 img {
     display: block;
-    width: 100%; /* Gjør bildene responsive ved å fylle beholderens bredde */
-    height: auto; /* Opprettholder bildenes proporsjoner */
+    width: 100%; 
+    height: auto; 
 }
 
 @media (min-width: 768px) {
