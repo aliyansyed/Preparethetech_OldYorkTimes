@@ -16,14 +16,14 @@
     </header>
 
     <main>
-        <section class="scrollytelling">
+        <section class="scrollytelling active">
             <div class="news-item">
                 <article class="news-content">
                     <div class="text-box">
                         <p>Nyhetssak 2: Ut a vestibulum orci, eget viverra lectus. Duis dapibus turpis sit amet libero volutpat, sit amet ultricies enim ultricies.</p>
                     </div>
                     <div class="image-box">
-                        <img src="img/picture6.png" alt="" loading="lazy">
+                        <img src="img/picture6.png" alt="">
                     </div>
                 </article>
             </div>
@@ -107,22 +107,27 @@
     </footer>
 
     <script>
-        document.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('.scrollytelling');
-            const triggerPoint = window.innerHeight / 1.2;
+      document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('.scrollytelling')
     
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-    
-                if (sectionTop < triggerPoint) {
-                    section.classList.add('active');
-                } else {
-                    section.classList.remove('active');
-                }
-            });
-        });
+    if (sections.length > 0) {
+        sections[0].classList.add('active')
+    }
 
-        
+    const triggerPoint = window.innerHeight / 1.2
+
+    document.addEventListener('scroll', function () {
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top
+
+            if (sectionTop < triggerPoint) {
+                section.classList.add('active')
+            } else {
+                section.classList.remove('active')
+            }
+        })
+    })
+})
     </script>
 </body>
 </html>

@@ -41,7 +41,6 @@ section.scrollytelling {
     width: 100vw;
     transition: opacity 1s cubic-bezier(0.25, 0.8, 0.25, 1);
     z-index: 1;
-    /* Sørg for at seksjonene er bak footeren */
 }
 
 section.scrollytelling.active {
