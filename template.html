@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLD YORK TIMES</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">OLD YORK TIMES</div>
+        <div class="icons">
+            <span class="profile-icon">👤</span>
+            <span class="menu-icon">☰</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="scrollytelling active">
+            <div class="news-item">
+                <article class="news-content">
+                    <img src="img/picture6.png" alt="">
+                    <p>Nyhetssak 1: In gravida, metus fringilla scelerisque viverra, sapien turpis ullamcorper lorem, eu viverra augue nisl at enim. Mauris sem ligula, fermentum a cursus nec, convallis a tortor.</p>
+                </article>
+            </div>
+        </section>
+    
+        <section class="scrollytelling">
+            <div class="news-item">
+                <article class="news-content">
+                    <img src="img/picture5.png" alt="" loading="lazy">>
+                    <p>Nyhetssak 1: In gravida, metus fringilla scelerisque viverra, sapien turpis ullamcorper lorem, eu viverra augue nisl at enim. Mauris sem ligula, fermentum a cursus nec, convallis a tortor.</p>
+                </article>
+            </div>
+        </section>
+    
+        <section class="scrollytelling">
+            <div class="news-item">
+                <article class="news-content">
+                    <img src="img/picture4.png" alt="" loading="lazy">
+                    <p>Nyhetssak 1: In gravida, metus fringilla scelerisque viverra, sapien turpis ullamcorper lorem, eu viverra augue nisl at enim. Mauris sem ligula, fermentum a cursus nec, convallis a tortor.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="scrollytelling">
+            <div class="news-item">
+                <article class="news-content">
+                    <img src="img/picture3.png" alt="" loading="lazy">
+                    <p>Nyhetssak 1: In gravida, metus fringilla scelerisque viverra, sapien turpis ullamcorper lorem, eu viverra augue nisl at enim. Mauris sem ligula, fermentum a cursus nec, convallis a tortor.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="scrollytelling">
+            <div class="news-item">
+                <article class="news-content">
+                    <img src="img/picture2.png" alt="" loading="lazy">
+                    <p>Nyhetssak 1: In gravida, metus fringilla scelerisque viverra, sapien turpis ullamcorper lorem, eu viverra augue nisl at enim. Mauris sem ligula, fermentum a cursus nec, convallis a tortor.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="scrollytelling">
+            <div class="news-item">
+                <article class="news-content">
+                    <img src="img/picture1.png" alt="" loading="lazy">
+                    <p>Nyhetssak 1: In gravida, metus fringilla scelerisque viverra, sapien turpis ullamcorper lorem, eu viverra augue nisl at enim. Mauris sem ligula, fermentum a cursus nec, convallis a tortor.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+
+    
+    
+
+    <footer>
+        <p>Abdulkalik Ahmed Mohammed - Producer</p>
+        <p>Aliyan Syed - Designer</p>
+        <p>Anders Klevaas - Web Developer</p>
+        <p>Samuel Johan Holtet Atayo - Journalist</p>
+    </footer>
+
+    <script>
+        document.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('.scrollytelling');
+            const triggerPoint = window.innerHeight / 1.2;
+    
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+    
+                if (sectionTop < triggerPoint) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        });
+
+        
+    </script>
+</body>
+</html>
