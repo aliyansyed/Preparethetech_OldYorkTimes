@@ -59,8 +59,21 @@ header .icons {
     grid-template-columns: 1fr;
     gap: 10px;
 }
+.news-item1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
 
 .image-placeholder {
+    height: 200px;
+    background-color: #e0e0e0;
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+    border-radius: 10px; 
+}
+.image-placeholder1 {
     height: 200px;
     background-color: #e0e0e0;
     text-align: center;
@@ -80,7 +93,10 @@ header .icons {
     transform: translateY(20px);
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
-
+.news-content1 {
+    font-size: 2rem;
+    color: lightblue
+}
 .news-content img{
     height: auto; 
     max-width: 100%; 
